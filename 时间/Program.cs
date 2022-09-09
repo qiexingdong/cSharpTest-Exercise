@@ -13,35 +13,6 @@ namespace Day03
             Console.WriteLine( GetDayOfWeek(2022, 9, 9));
         }
         /// <summary>
-        /// 判断是否为闰年
-        /// </summary>
-        /// <param name="year">年份</param>
-        /// <returns>bool值</returns>
-        private static bool RunYear(int year)
-        {
-            return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
-        }
-        /// <summary>
-        /// 判断某月的天数
-        /// </summary>
-        /// <param name="year">年份</param>
-        /// <param name="month">月份</param>
-        /// <returns>月份的天数</returns>
-        private static int MonthDay(int year, int month)
-        {
-            if (month == 2)
-            {
-                if (RunYear(year))
-                    return 29;
-                else
-                    return 28;
-            }
-            else if (month == 4 || month == 6 || month == 9 || month == 11)
-                return 30;
-            else
-                return 31;
-        }
-        /// <summary>
         /// 判断某天在星期几
         /// </summary>
         /// <param name="year">年份</param>
@@ -76,18 +47,6 @@ namespace Day03
                 }
                 Console.WriteLine();
             }
-        }
-        private static void MofSecond(int m)
-        {
-            Console.WriteLine(m * 60);
-        }
-        private static void MHofSecond(int m, int h)
-        {
-            Console.WriteLine(m * 60 + h * 60 * 60);
-        }
-        private static void MHDofSecond(int m, int h, int d)
-        {
-            Console.WriteLine(m * 60 + h * 60 * 60 + d * 24 * 60 * 60);
         }
     }
 }
